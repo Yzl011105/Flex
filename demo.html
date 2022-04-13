@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex布局</title>
+	</head>
+	<style>
+		* {
+			margin: 20px;
+		}
+		.box {
+			display: flex;
+			/* flex-direction: row;
+			flex-wrap: wrap; */
+			flex-flow: row wrap;
+			/* justify-content: center;
+			align-items: center; */
+			/* align-content: center; */ /* 多轴线时有效果 */
+			width: 500px;
+			height: 500px;
+			background-color: blueviolet;
+		}
+		li {
+			width: 100px;
+			height: 100px;
+		}
+		#l1 {
+			background-color: crimson;
+			/* order: 2; */
+			/* flex-grow: 2; */
+		}
+		#l2 {
+			background-color: hotpink;
+			/* order: 1; */
+			/* flex-shrink: 2;*/ /* 空间不足时缩小 */
+			/* align-self: center; */
+		}
+		#l3 {
+			background-color: skyblue;
+			/* order: 3; */
+			/* flex: auto;默认 1 1 auto */
+			/* flex: none;默认 0 0 auto */
+		}
+	</style>
+	<body>
+		<div class="box">
+			<li id="l1"></li>
+			<li id="l2"></li>
+			<li id="l3"></li>
+		</div>
+	</body>
+</html>
